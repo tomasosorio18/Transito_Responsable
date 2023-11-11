@@ -121,6 +121,7 @@ class RegisterActivity : AppCompatActivity(),RegisterContract.View {
         initButtonRegistrar()
         initButtonVolver()
         initlblVolver()
+
     }
     fun initProgressBar(){
         barra_progres = findViewById(R.id.barra_progresoR)
