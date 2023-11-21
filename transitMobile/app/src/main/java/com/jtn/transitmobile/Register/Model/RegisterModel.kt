@@ -1,15 +1,12 @@
 package com.jtn.transitmobile.Register.Model
 
-import android.R
 import android.content.ContentValues.TAG
 import android.util.Log
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
-import com.google.firebase.auth.FirebaseAuthUserCollisionException
-import com.google.firebase.auth.FirebaseAuthWeakPasswordException
 import com.google.firebase.firestore.FirebaseFirestore
 import com.jtn.transitmobile.Register.Contract.RegisterContract
+
 
 
 class RegisterModel: RegisterContract.Model{
@@ -51,36 +48,6 @@ class RegisterModel: RegisterContract.Model{
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "createUserWithEmail:failure", task.exception)
                     callback.RegistroError("Registration failed.")
-
-                }
-
-                if (task.isSuccessful) {
-                    val user = auth.currentUser
-                    user?.uid?.let { uid ->
-                        // Almacena los datos adicionales del usuario en Firestore
-                        val userData = hashMapOf(
-                            "nombre" to nombre,
-                            "apellido" to apellido
-                            // Puedes agregar otros datos adicionales aquí
-                        )
-                        db.collection("users").document(uid)
-                            .set(userData)
-                            .addOnSuccessListener {
-                                callback.RegistroExito()
-                            }
-                    }
-                }else{
-                    try {
-                        throw task.exception!!
-                    } catch (e: FirebaseAuthWeakPasswordException) {
-                        callback.RegistroError("Contraseña muy debil.")
-                    } catch (e: FirebaseAuthInvalidCredentialsException) {
-                        callback.RegistroError("Formato correo erroneo.")
-                    } catch (e: FirebaseAuthUserCollisionException) {
-                        callback.RegistroError("Usuario ya existe!.")
-                    } catch (e: Exception) {
-                        Log.e(TAG, e.message!!)
-                    }
 
                 }
             }

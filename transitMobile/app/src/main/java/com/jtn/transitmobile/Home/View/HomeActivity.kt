@@ -2,37 +2,27 @@ package com.jtn.transitmobile.Home.View
 
 import android.annotation.SuppressLint
 import android.app.Dialog
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.jtn.transitmobile.R
-
-
-import android.view.View
-import android.view.ViewGroup
-
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import com.jtn.transitmobile.databinding.FragmentHomeBinding
+import android.widget.Toast
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.jtn.transitmobile.SacarPartes.View.SacarPartesActivity
+import com.jtn.transitmobile.VerPartes.View.PartesActivity
 
 class HomeActivity : AppCompatActivity() {
-    private var _binding: FragmentHomeBinding? = null
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
-
     lateinit var lblNombre :TextView
     lateinit var lblApellido :TextView
     lateinit var lblCorreo :TextView
     lateinit var dialog: Dialog
-
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -43,9 +33,34 @@ class HomeActivity : AppCompatActivity() {
         dialog = Dialog(this)
         initTextView()
         setTextIntent()
+        val nombre = intent.getStringExtra("nombre")
+        val apellido = intent.getStringExtra("apellido")
+        val userEmail = intent.getStringExtra("userEmail")
+
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+
+        bottomNavigationView.setOnNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.Partes -> {
+                    startActivity(Intent(this, PartesActivity::class.java).apply {
+                        putExtras(getUserBundle(nombre, apellido, userEmail))
+                    })
+                    true
+                }
+                R.id.SacarParte -> {
+                    startActivity(Intent(this, SacarPartesActivity::class.java).apply {
+                        putExtras(getUserBundle(nombre, apellido, userEmail))
+                    })
+                    true
+                }
+                else -> false
+            }
+        }
 
     }
-
+    private fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
     fun initTextView() {
         lblNombre = findViewById(R.id.lblNombreU)
         lblApellido = findViewById(R.id.lblApellidoU)
@@ -98,5 +113,12 @@ class HomeActivity : AppCompatActivity() {
         // Llama al método que muestra el modal
         showPopupLogout()
 
+    }
+    private fun getUserBundle(nombre: String?, apellido: String?, userEmail: String?): Bundle {
+        return Bundle().apply {
+            putString("nombre", nombre)
+            putString("apellido", apellido)
+            putString("userEmail", userEmail)
+        }
     }
 }

@@ -69,17 +69,13 @@ class RegisterActivity : AppCompatActivity(),RegisterContract.View {
         }
         dialog?.show()
     }
-    fun showPopupError(mensaje:String) {
+    fun showPopupError() {
         if (dialog != null) {
             val dialogview = LayoutInflater.from(this)
                 .inflate(R.layout.error_modal, null, false)
             dialog?.setCancelable(true)
             dialog?.setContentView(dialogview)
             dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-
-            val lbl_error_desc = dialog.findViewById(R.id.lblError_descripcion) as TextView
-            lbl_error_desc.text = mensaje
-            lbl_error_desc.gravity = Gravity.CENTER
 
             val btn_aceptar = dialog.findViewById(R.id.btn_aceptarE) as Button
             btn_aceptar.setOnClickListener {
@@ -180,13 +176,7 @@ class RegisterActivity : AppCompatActivity(),RegisterContract.View {
 
     override fun RegistroError(mensaje: String) {
         barra_progres.visibility = View.GONE
-        if(mensaje == "Contraseña muy debil."){
-            showPopupError(mensaje)
-        }else if(mensaje == "Formato correo erroneo."){
-            showPopupError(mensaje)
-        }else if(mensaje == "Usuario ya existe!."){
-            showPopupError(mensaje)
-        }
+        showPopupError()
         Toast.makeText(this, "error", Toast.LENGTH_SHORT).show()
     }
 }
