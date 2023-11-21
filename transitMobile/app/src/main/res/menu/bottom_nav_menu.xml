@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_home"
+        android:id="@+id/homeActivity"
         android:icon="@drawable/home_variant"
         android:title="@string/title_home" />
 
     <item
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/Partes"
         android:icon="@drawable/list_box"
         android:title="@string/title_lista_partes" />
 
     <item
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/SacarParte"
         android:icon="@drawable/car_emergency"
         android:title="@string/title_sacar_partes" />
 
