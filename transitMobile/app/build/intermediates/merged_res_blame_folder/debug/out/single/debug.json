@@ -1,0 +1,306 @@
+[
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_correo.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\correo.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_redondear.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\redondear.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\mipmap-xhdpi_back.png.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\mipmap-xhdpi\\back.png"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_error.png.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\error.png"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_candado_abierto.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\candado_abierto.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_persona.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\persona.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_ic_notifications_black_24dp.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\ic_notifications_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_ic_home_black_24dp.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\ic_home_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_tr_logo.png.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\tr_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_home_variant.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\home_variant.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_ic_cerrar2.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\ic_cerrar2.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_fondo.png.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\fondo.png"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_contra2.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\contra2.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_ic_dashboard_black_24dp.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\ic_dashboard_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_cara.png.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\cara.png"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\mipmap-xxxhdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_shapeboton.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\shapeboton.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_shapecorreo.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\shapecorreo.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_splash2.png.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\splash2.png"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\layout_error_modal_parte.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\layout\\error_modal_parte.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_exito.png.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\exito.png"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\navigation_mobile_navigation.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\navigation\\mobile_navigation.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\mipmap-xhdpi_logopc.png.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\mipmap-xhdpi\\logopc.png"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_logo_tr.png.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\logo_tr.png"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_persona2.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\persona2.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\layout_activity_partes.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\layout\\activity_partes.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\mipmap-xhdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_shaperut.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\shaperut.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\mipmap-xxhdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\mipmap-mdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\layout_cerrar_sesion.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\layout\\cerrar_sesion.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_car_emergency.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\car_emergency.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\layout_exito_modal.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\layout\\exito_modal.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\layout_activity_sacar_partes.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\layout\\activity_sacar_partes.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\layout_warning_modal.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\layout\\warning_modal.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\layout_exito_modal_parte.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\layout\\exito_modal_parte.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_back3.jpg.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\back3.jpg"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\layout_error_modal.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\layout\\error_modal.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_splash.png.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\splash.png"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_candadocerrado.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\candadocerrado.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_shapecontra.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\shapecontra.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "com.jtn.transitmobile.app-merged_res-53:/layout_activity_sacar_partes.xml.flat",
+        "source": "com.jtn.transitmobile.app-main-55:/layout/activity_sacar_partes.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_alerta.png.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\alerta.png"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\layout_activity_product_adapter.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\layout\\activity_product_adapter.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_logout.png.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\logout.png"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_back.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\back.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_card_background.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\card_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_list_box.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\list_box.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_email2.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\email2.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_shapebotonregistro.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\shapebotonregistro.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_draw.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\draw.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\mipmap-hdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_persona3.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\persona3.xml"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\mipmap-xhdpi_login.png.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\mipmap-xhdpi\\login.png"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-merged_res-53:\\drawable_shape_nombre.xml.flat",
+        "source": "C:\\Users\\nicolas\\Desktop\\Clase\\app\\daemon\\8.0\\com.jtn.transitmobile.app-main-55:\\drawable\\shape_nombre.xml"
+    }
+]
