@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "477194685389",
+    "project_id": "transittest-81fbd",
+    "storage_bucket": "transittest-81fbd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477194685389:android:dfba201bf68fb37b8a5284",
+        "android_client_info": {
+          "package_name": "com.jtn.transitmobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIUE772uvZBddW1NBicoWfMPQyHpKR-G0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
