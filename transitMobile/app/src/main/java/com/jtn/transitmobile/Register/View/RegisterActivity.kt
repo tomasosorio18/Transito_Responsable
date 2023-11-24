@@ -1,6 +1,7 @@
 package com.jtn.transitmobile.Register.View
 
 import android.app.Dialog
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Build
@@ -19,6 +20,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.view.marginLeft
+import com.jtn.transitmobile.Login.View.MainActivity
 import com.jtn.transitmobile.R
 import com.jtn.transitmobile.Register.Contract.RegisterContract
 import com.jtn.transitmobile.Register.Model.RegisterModel
@@ -140,13 +142,20 @@ class RegisterActivity : AppCompatActivity(),RegisterContract.View {
     }
     fun initlblVolver(){
        lblVolver = findViewById(R.id.lblVolver)
-        lblVolver.setOnClickListener{ finish() }
+        lblVolver.setOnClickListener{
+
+            val intentLogin = Intent(this, MainActivity::class.java)
+            startActivity(intentLogin)
+            finish()
+        }
     }
 
 
     fun initButtonVolver(){
         btnVolver=findViewById(R.id.btn_volver)
-        btnVolver.setOnClickListener { finish() }
+        btnVolver.setOnClickListener { val intentLogin = Intent(this, MainActivity::class.java)
+            startActivity(intentLogin)
+            finish() }
     }
     fun initButtonRegistrar(){
         btnRegistrar =findViewById(R.id.btn_registro)

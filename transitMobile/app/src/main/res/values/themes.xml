@@ -10,4 +10,11 @@
     <style name="CustomButtonStyle" parent="Widget.AppCompat.Button">
         <!-- Agrega atributos de estilo personalizados aquí -->
     </style>
+    <style name="Theme.TransitMobile.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.TransitMobile.AppBarOverlay"
+        parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.TransitMobile.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

@@ -1,33 +1,32 @@
 package com.jtn.transitmobile.Login.View
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
-import android.widget.ToggleButton
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.google.firebase.Firebase
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.auth
 import com.jtn.transitmobile.Home.View.HomeActivity
 import com.jtn.transitmobile.Login.Contract.LoginContract
 import com.jtn.transitmobile.Login.Model.LoginModel
 import com.jtn.transitmobile.Login.Presenter.LoginPresenter
 import com.jtn.transitmobile.R
 import com.jtn.transitmobile.Register.View.RegisterActivity
+
 
 class MainActivity : AppCompatActivity(),LoginContract.View {
 
@@ -38,6 +37,9 @@ class MainActivity : AppCompatActivity(),LoginContract.View {
     lateinit var barra_progres: ProgressBar
     lateinit var dialog: Dialog
     private lateinit var presenter: LoginContract.Presenter
+    lateinit var checkbox: CheckBox
+
+
 
     override fun onCreate(savedInstanceState: Bundle?)  {
         super.onCreate(savedInstanceState)
@@ -49,13 +51,36 @@ class MainActivity : AppCompatActivity(),LoginContract.View {
         dialog = Dialog(this)
         initComponent()
 
+        val (savedEmail, savedPassword) = getSavedLoginDetails()
+        if (savedEmail != null && savedPassword != null) {
+            txtCorreo.setText(savedEmail)
+            txtContraseña.setText(savedPassword)
+            checkbox.isChecked = true
+        }
+
     }
 
+    fun saveLoginDetails(email: String, password: String) {
+        val sharedPreferences = getSharedPreferences("loginDetails", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putString("email", email)
+        editor.putString("password", password)
+        editor.apply()
+    }
+
+
+    fun getSavedLoginDetails(): Pair<String?, String?> {
+        val sharedPreferences = getSharedPreferences("loginDetails", MODE_PRIVATE)
+        val email = sharedPreferences.getString("email", null)
+        val password = sharedPreferences.getString("password", null)
+        return Pair(email, password)
+    }
     fun initComponent(){
         initProgressBar()
         initInputCorreo()
         initInputContraseña()
         initButtonMenuRegistro()
+        initCheckbox()
         initButtonLogin()
     }
     fun showPopupError(){
@@ -118,6 +143,10 @@ class MainActivity : AppCompatActivity(),LoginContract.View {
     fun initInputContraseña(){
         txtContraseña = findViewById(R.id.txtContrasena)
     }
+    fun initCheckbox(){
+        checkbox = findViewById(R.id.checkbox)
+    }
+
     fun initButtonLogin(){
         btnLogin =findViewById(R.id.btn_iniciar)
         btnLogin.setOnClickListener {
@@ -146,6 +175,7 @@ class MainActivity : AppCompatActivity(),LoginContract.View {
     override fun LoginExito(userEmail: String, nombre: String, apellido: String) {
         barra_progres.visibility = View.GONE
         Toast.makeText(this, "exito", Toast.LENGTH_SHORT).show()
+        saveLoginDetails(userEmail, txtContraseña.text.toString())
         val intentHome = Intent(this, HomeActivity::class.java)
         intentHome.putExtra("userEmail", userEmail)
         intentHome.putExtra("nombre", nombre)
@@ -156,5 +186,10 @@ class MainActivity : AppCompatActivity(),LoginContract.View {
     override fun LoginError(mensaje: String) {
         barra_progres.visibility = View.GONE
         showPopupError()
+    }
+    @SuppressLint("MissingSuperCall")
+    override fun onBackPressed() {
+        finishAffinity()
+
     }
 }

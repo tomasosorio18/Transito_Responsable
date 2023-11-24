@@ -7,22 +7,26 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.os.Bundle
+
+import com.jtn.transitmobile.R
+
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.jtn.transitmobile.R
-import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.jtn.transitmobile.Commons.SeleccionTipoActivity
 import com.jtn.transitmobile.SacarPartes.View.SacarPartesActivity
 import com.jtn.transitmobile.VerPartes.View.PartesActivity
 
+
 class HomeActivity : AppCompatActivity() {
     lateinit var lblNombre :TextView
-    lateinit var lblApellido :TextView
     lateinit var lblCorreo :TextView
     lateinit var dialog: Dialog
+    lateinit var cerrar: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -30,8 +34,10 @@ class HomeActivity : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.statusBarColor = ContextCompat.getColor(this, R.color.colorPrimaryDark)
         }
+
         dialog = Dialog(this)
         initTextView()
+        initComponent()
         setTextIntent()
         val nombre = intent.getStringExtra("nombre")
         val apellido = intent.getStringExtra("apellido")
@@ -48,7 +54,7 @@ class HomeActivity : AppCompatActivity() {
                     true
                 }
                 R.id.SacarParte -> {
-                    startActivity(Intent(this, SacarPartesActivity::class.java).apply {
+                    startActivity(Intent(this, SeleccionTipoActivity::class.java).apply {
                         putExtras(getUserBundle(nombre, apellido, userEmail))
                     })
                     true
@@ -61,9 +67,13 @@ class HomeActivity : AppCompatActivity() {
     private fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
+    fun initComponent(){
+        cerrar = findViewById(R.id.t_linea)
+        cerrar.setOnClickListener{ showPopupLogout() }
+    }
     fun initTextView() {
         lblNombre = findViewById(R.id.lblNombreU)
-        lblApellido = findViewById(R.id.lblApellidoU)
+
         lblCorreo= findViewById(R.id.lblCorreoU)
     }
     fun setTextIntent(){
@@ -72,8 +82,8 @@ class HomeActivity : AppCompatActivity() {
         val userEmail = intent.getStringExtra("userEmail")
 
         if (nombre != null && apellido != null && userEmail != null) {
-            lblNombre.text = nombre
-            lblApellido.text = apellido
+            val nombreCompleto = "$nombre $apellido"
+            lblNombre.text = nombreCompleto
             lblCorreo.text = userEmail
         } else {
             // Manejar el caso en que los extras no están presentes

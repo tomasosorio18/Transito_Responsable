@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SacarPartes.View.SacarPartesActivity">
-
+    tools:context=".SacarPartesEmpadronado.View.SacarParteEmpadronadoActivity">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarSacarPartes"
         android:layout_width="0dp"
@@ -72,8 +71,19 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <!-- Content for Card 1 Details -->
-
+                <EditText
+                    android:id="@+id/txtPatente"
+                    android:layout_width="332dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/shaperut"
+                    android:drawablePadding="10dp"
+                    android:hint="Ingrese Patente del Vehiculo"
+                    android:padding="15dp"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/black"
+                    android:textColorHint="@color/black" />
                 <EditText
                     android:id="@+id/txtRut"
                     android:layout_width="332dp"
@@ -85,22 +95,8 @@
                     android:padding="15dp"
                     android:textColor="@color/black"
                     android:textColorHighlight="@color/black"
-                    android:textColorHint="@color/black" />
-
-                <EditText
-                    android:id="@+id/txtPatente"
-                    android:layout_width="332dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/shaperut"
-                    android:drawablePadding="10dp"
-                    android:hint="Ingrese Patente del Vehixulo"
-                    android:padding="15dp"
-                    android:textColor="@color/black"
-                    android:textColorHighlight="@color/black"
-                    android:textColorHint="@color/black" />
-
+                    android:textColorHint="@color/black"
+                    />
                 <EditText
                     android:id="@+id/txtNombreC"
                     android:layout_width="332dp"
@@ -187,6 +183,7 @@
                     android:padding="15dp"
                     android:text="Sacar Parte"
                     android:textColor="@color/white" />
+
 
             </LinearLayout>
         </ScrollView>

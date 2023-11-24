@@ -1,4 +1,4 @@
-package com.jtn.transitmobile.SacarPartes.View
+package com.jtn.transitmobile.SacarPartesEmpadronado.View
 
 import android.annotation.SuppressLint
 import android.app.Dialog
@@ -14,12 +14,10 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.jtn.transitmobile.Commons.BDServices
@@ -31,6 +29,9 @@ import com.jtn.transitmobile.R
 import com.jtn.transitmobile.SacarPartes.Contract.SacarPartesContract
 import com.jtn.transitmobile.SacarPartes.Model.SacarParteModel
 import com.jtn.transitmobile.SacarPartes.Presenter.SacarPartePresenter
+import com.jtn.transitmobile.SacarPartesEmpadronado.Contract.SacarParteEmpadronadoContract
+import com.jtn.transitmobile.SacarPartesEmpadronado.Model.SacarParteEmpadronadoModel
+import com.jtn.transitmobile.SacarPartesEmpadronado.Presenter.SacarParteEmpadronadoPresenter
 import com.jtn.transitmobile.VerPartes.View.PartesActivity
 import java.text.SimpleDateFormat
 import java.time.LocalDate
@@ -39,8 +40,8 @@ import java.time.format.DateTimeFormatter
 import java.util.Calendar
 import java.util.Locale
 
-class SacarPartesActivity : AppCompatActivity(),SacarPartesContract.View {
-    private lateinit var presenter: SacarPartesContract.Presenter
+class SacarParteEmpadronadoActivity : AppCompatActivity(), SacarParteEmpadronadoContract.View {
+    private lateinit var presenter: SacarParteEmpadronadoContract.Presenter
     private lateinit var spinner: Spinner
     private lateinit var txtRut : EditText
     private lateinit var txtPatente: EditText
@@ -49,37 +50,147 @@ class SacarPartesActivity : AppCompatActivity(),SacarPartesContract.View {
     private lateinit var txtApellidoM: EditText
     private lateinit var txtDomicilioC: EditText
     private lateinit var btnParte:Button
-    private lateinit var barra_progres: ProgressBar
-    private lateinit var dialog: Dialog
     lateinit var cerrar: ImageView
+    private lateinit var dialog: Dialog
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sacar_partes)
-
+        setContentView(R.layout.activity_sacar_parte_empadronado)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.statusBarColor = ContextCompat.getColor(this, R.color.colorPrimaryDark)
         }
 
         dialog = Dialog(this)
-        initTextView()
-
-
+        initComponent()
         val firestoreService = BDServices()
-        presenter = SacarPartePresenter(this,SacarParteModel(firestoreService))
+        presenter = SacarParteEmpadronadoPresenter(this, SacarParteEmpadronadoModel(firestoreService))
         spinner = findViewById(R.id.codigo_infraccion)
         presenter.loadSpinnerOptions()
 
-        txtRut.onFocusChangeListener = View.OnFocusChangeListener{ _, hasFocus->
+        txtPatente.onFocusChangeListener = View.OnFocusChangeListener{ _, hasFocus->
             if(!hasFocus){
-                val rut = txtRut.text.toString()
-                presenter.buscarPersonaPorRut(rut)
+                val patente = txtPatente.text.toString()
+                presenter.buscarPersonaPorPatente(patente)
             }
         }
-
-        initComponent()
+    }
+    @RequiresApi(Build.VERSION_CODES.O)
+    fun initComponent(){
+        initTextView()
+        BottomNavview()
         btnSacarParte()
+        cerrar = findViewById(R.id.t_lineaSacarPartes)
+        cerrar.setOnClickListener{ showPopupLogout() }
+    }
+    fun initTextView() {
 
+        txtRut = findViewById(R.id.txtRut)
+        txtPatente = findViewById(R.id.txtPatente)
+        txtNombreC = findViewById(R.id.txtNombreC)
+        txtApellidoP = findViewById(R.id.txtApellidoP)
+        txtApellidoM = findViewById(R.id.txtApellidoM)
+        txtDomicilioC = findViewById(R.id.txtDomicilioC)
+    }
+    @RequiresApi(Build.VERSION_CODES.O)
+    fun btnSacarParte(){
+        // Obtén la fecha actual
+        val calendar = Calendar.getInstance()
+
+        // Formatea la fecha como desees, aquí se utiliza el formato "dd/MM/yyyy"
+        val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+        val fechaActual = dateFormat.format(calendar.time)
+
+        val nuevaFecha = agregarDosSemanasAFechaActual()
+        val horaActual = obtenerHoraActual()
+        val nombre = intent.getStringExtra("nombre")
+        val apellido = intent.getStringExtra("apellido")
+        val nombreCompleto = nombre + " " + apellido
+
+
+        btnParte = findViewById(R.id.btnParte)
+        btnParte.setOnClickListener{
+            val selectedOption = spinner.selectedItem.toString()
+            if (txtRut.text.isNotEmpty() && txtPatente.text.isNotEmpty() && txtNombreC.text.isNotEmpty() && txtApellidoP.text.isNotEmpty() && txtApellidoM.text.isNotEmpty() && txtDomicilioC.text.isNotEmpty()) {
+                // Llamar a Firebase para el registro aquí
+
+                val newParte= Parte("${txtRut.text.toString()}","${txtNombreC.text.toString()}","${txtApellidoP.text.toString()}","${txtApellidoM.text.toString()}","${selectedOption.toString()}","${txtDomicilioC.text.toString()}","${fechaActual.toString()}","${nuevaFecha.toString()}","${horaActual.toString()}","${nombreCompleto.toString()}","${txtPatente.text.toString()}")
+                presenter.addParte(newParte)
+            } else {
+
+                showPopupAlert()
+            }
+
+
+        }
+    }
+    override fun showSpinnerOptions(options: List<String>) {
+        val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, options)
+        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinner.adapter = spinnerAdapter
+    }
+
+    override fun showError(message: String) {
+        Toast.makeText(this, "Error: $message", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun mostrarDatosPersona(persona: Persona) {
+
+        txtRut.setText(persona.rut)
+        txtRut.keyListener=null
+        txtRut.visibility = View.VISIBLE
+
+        txtNombreC.setText(persona.nombre)
+        txtNombreC.keyListener = null
+        txtNombreC.visibility = View.VISIBLE
+
+        txtApellidoP.setText(persona.apellido_paterno)
+        txtApellidoP.keyListener = null
+        txtApellidoP.visibility = View.VISIBLE
+
+        txtApellidoM.setText(persona.apellido_materno)
+        txtApellidoM.keyListener = null
+        txtApellidoM.visibility = View.VISIBLE
+
+        txtDomicilioC.setText(persona.domicilio)
+        txtDomicilioC.keyListener = null
+        txtDomicilioC.visibility = View.VISIBLE
+    }
+
+    override fun mostrarError(mensaje: String) {
+        Toast.makeText(this, "Error: $mensaje", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun showSuccess(message: String) {
+        showPopupExito()
+        Toast.makeText(this, "$message", Toast.LENGTH_SHORT).show()
+    }
+    fun BottomNavview(){
+        val nombre = intent.getStringExtra("nombre")
+        val apellido = intent.getStringExtra("apellido")
+        val userEmail = intent.getStringExtra("userEmail")
+
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+
+        ((bottomNavigationView)).setSelectedItemId(R.id.SacarParte)
+
+        bottomNavigationView.setOnNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.homeActivity -> {
+
+                    startActivity(Intent(this, HomeActivity::class.java).apply {
+                        putExtras(getUserBundle(nombre, apellido, userEmail))
+                    })
+                    true
+                }
+                R.id.Partes -> {
+                    startActivity(Intent(this, PartesActivity::class.java).apply {
+                        putExtras(getUserBundle(nombre, apellido, userEmail))
+                    })
+                    true
+                }
+                else -> false
+            }
+        }
     }
     fun showPopupExito(){
         val dialogview = LayoutInflater.from(this)
@@ -118,53 +229,6 @@ class SacarPartesActivity : AppCompatActivity(),SacarPartesContract.View {
         }
         dialog?.show()
     }
-    @RequiresApi(Build.VERSION_CODES.O)
-    fun initComponent(){
-        BottomNavview()
-        cerrar = findViewById(R.id.t_lineaSacarPartes)
-        cerrar.setOnClickListener{ showPopupLogout() }
-    }
-    fun initTextView() {
-
-        txtRut = findViewById(R.id.txtRut)
-        txtPatente = findViewById(R.id.txtPatente)
-        txtNombreC = findViewById(R.id.txtNombreC)
-        txtApellidoP = findViewById(R.id.txtApellidoP)
-        txtApellidoM = findViewById(R.id.txtApellidoM)
-        txtDomicilioC = findViewById(R.id.txtDomicilioC)
-    }
-    fun initProgressBar(){
-        barra_progres = findViewById(R.id.barra_progresoR)
-    }
-
-    fun BottomNavview(){
-        val nombre = intent.getStringExtra("nombre")
-        val apellido = intent.getStringExtra("apellido")
-        val userEmail = intent.getStringExtra("userEmail")
-
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-
-        ((bottomNavigationView)).setSelectedItemId(R.id.SacarParte)
-
-        bottomNavigationView.setOnNavigationItemSelectedListener { menuItem ->
-            when (menuItem.itemId) {
-                R.id.homeActivity -> {
-
-                    startActivity(Intent(this, HomeActivity::class.java).apply {
-                        putExtras(getUserBundle(nombre, apellido, userEmail))
-                    })
-                    true
-                }
-                R.id.Partes -> {
-                    startActivity(Intent(this, PartesActivity::class.java).apply {
-                        putExtras(getUserBundle(nombre, apellido, userEmail))
-                    })
-                    true
-                }
-                else -> false
-            }
-        }
-    }
     fun showPopupLogout() {
         val dialog = Dialog(this)
         dialog.setContentView(R.layout.cerrar_sesion)
@@ -200,34 +264,12 @@ class SacarPartesActivity : AppCompatActivity(),SacarPartesContract.View {
         showPopupLogout()
 
     }
-
-    override fun showSpinnerOptions(options: List<String>) {
-        val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, options)
-        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinner.adapter = spinnerAdapter
-    }
-
-    override fun showError(message: String) {
-        Toast.makeText(this, "Error: $message", Toast.LENGTH_SHORT).show()
-    }
-
-    override fun mostrarDatosPersona(persona: Persona) {
-        txtNombreC.setText(persona.nombre)
-        txtNombreC.keyListener = null
-        txtNombreC.visibility = View.VISIBLE
-
-        txtApellidoP.setText(persona.apellido_paterno)
-        txtApellidoP.keyListener = null
-        txtApellidoP.visibility = View.VISIBLE
-
-        txtApellidoM.setText(persona.apellido_materno)
-        txtApellidoM.keyListener = null
-        txtApellidoM.visibility = View.VISIBLE
-
-        txtDomicilioC.setText(persona.domicilio)
-        txtDomicilioC.keyListener = null
-        txtDomicilioC.visibility = View.VISIBLE
-
+    private fun getUserBundle(nombre: String?, apellido: String?, userEmail: String?): Bundle {
+        return Bundle().apply {
+            putString("nombre", nombre)
+            putString("apellido", apellido)
+            putString("userEmail", userEmail)
+        }
     }
     @RequiresApi(Build.VERSION_CODES.O)
     fun obtenerHoraActual(): String {
@@ -244,58 +286,5 @@ class SacarPartesActivity : AppCompatActivity(),SacarPartesContract.View {
         val formato = DateTimeFormatter.ofPattern("yyyy-MM-dd") // Puedes cambiar el formato según tus necesidades
 
         return fechaNueva.format(formato)
-    }
-
-    @RequiresApi(Build.VERSION_CODES.O)
-    fun btnSacarParte(){
-        // Obtén la fecha actual
-        val calendar = Calendar.getInstance()
-
-        // Formatea la fecha como desees, aquí se utiliza el formato "dd/MM/yyyy"
-        val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
-        val fechaActual = dateFormat.format(calendar.time)
-
-        val nuevaFecha = agregarDosSemanasAFechaActual()
-        val horaActual = obtenerHoraActual()
-        val nombre = intent.getStringExtra("nombre")
-        val apellido = intent.getStringExtra("apellido")
-        val nombreCompleto = nombre + " " + apellido
-
-
-        btnParte = findViewById(R.id.btnParte)
-        btnParte.setOnClickListener{
-            val selectedOption = spinner.selectedItem.toString()
-            if (txtRut.text.isNotEmpty() && txtPatente.text.isNotEmpty() && txtNombreC.text.isNotEmpty() && txtApellidoP.text.isNotEmpty() && txtApellidoM.text.isNotEmpty() && txtDomicilioC.text.isNotEmpty()) {
-                // Llamar a Firebase para el registro aquí
-
-                val newParte= Parte("${txtRut.text.toString()}","${txtNombreC.text.toString()}","${txtApellidoP.text.toString()}","${txtApellidoM.text.toString()}","${selectedOption.toString()}","${txtDomicilioC.text.toString()}","${fechaActual.toString()}","${nuevaFecha.toString()}","${horaActual.toString()}","${nombreCompleto.toString()}","${txtPatente.text.toString()}")
-                presenter.addParte(newParte)
-            } else {
-
-                showPopupAlert()
-            }
-
-
-        }
-    }
-    override fun mostrarError(mensaje: String) {
-        Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show()
-    }
-
-    override fun showSuccess(message: String) {
-
-        showPopupExito()
-        Toast.makeText(this, "$message", Toast.LENGTH_SHORT).show()
-    }
-
-
-
-
-    private fun getUserBundle(nombre: String?, apellido: String?, userEmail: String?): Bundle {
-        return Bundle().apply {
-            putString("nombre", nombre)
-            putString("apellido", apellido)
-            putString("userEmail", userEmail)
-        }
     }
 }

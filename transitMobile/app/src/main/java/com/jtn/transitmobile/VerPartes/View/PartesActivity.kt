@@ -5,15 +5,20 @@ import android.app.Dialog
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.ListView
 import android.widget.Toast
+
+import androidx.core.content.ContextCompat
+
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.jtn.transitmobile.Commons.BDServices
 import com.jtn.transitmobile.Commons.Parte
+import com.jtn.transitmobile.Commons.SeleccionTipoActivity
 import com.jtn.transitmobile.Home.View.HomeActivity
 import com.jtn.transitmobile.Login.View.MainActivity
 import com.jtn.transitmobile.R
@@ -28,9 +33,14 @@ class PartesActivity : AppCompatActivity(), VerPartesContract.view {
     private lateinit var adapter: VerParteAdapter
     private val itemsList = ArrayList<Parte>()
     private lateinit var listView: ListView
+    private lateinit var cerrar :ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_partes)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.statusBarColor = ContextCompat.getColor(this, R.color.colorPrimaryDark)
+        }
         BottomNavview()
         val nombre = intent.getStringExtra("nombre")
         val apellido = intent.getStringExtra("apellido")
@@ -43,11 +53,17 @@ class PartesActivity : AppCompatActivity(), VerPartesContract.view {
         presenter = VerPartesPresenter(this, VerPartesModel(firestoreService))
         presenter.loadPartesPorResponsable(responsable)
 
+        cerrar = findViewById(R.id.t_lineaPartes)
+        cerrar.setOnClickListener{ showPopupLogout() }
+
     }
 
 
     fun BottomNavview(){
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+
+        ((bottomNavigationView)).setSelectedItemId(R.id.Partes)
+
         bottomNavigationView.setOnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.homeActivity -> {
@@ -67,7 +83,7 @@ class PartesActivity : AppCompatActivity(), VerPartesContract.view {
                     val apellido = intent.getStringExtra("apellido")
                     val userEmail = intent.getStringExtra("userEmail")
                     // Acción para el botón Dashboard
-                    val intent = Intent(this, SacarPartesActivity::class.java)
+                    val intent = Intent(this, SeleccionTipoActivity::class.java)
                     intent.putExtra("nombre", nombre)
                     intent.putExtra("apellido", apellido)
                     intent.putExtra("userEmail", userEmail)

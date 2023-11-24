@@ -5,4 +5,5 @@ data class Persona(
     val nombre: String,
     val apellido_paterno: String,
     val apellido_materno: String,
-    val domicilio:String)
+    val domicilio:String,
+    val vehiculo_patente:String)

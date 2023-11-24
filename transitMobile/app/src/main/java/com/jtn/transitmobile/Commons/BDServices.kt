@@ -38,9 +38,10 @@ class BDServices {
                     val apellido_paterno = document.getString("apellido_paterno")
                     val apellido_materno = document.getString("apellido_materno")
                     val domicilio = document.getString("domicilio")
+                    val patente = document.getString("patente")
 
-                    if (nombre != null && apellido_paterno != null && apellido_materno != null && domicilio != null) {
-                        val persona = Persona(rut, nombre, apellido_paterno,apellido_materno,domicilio)
+                    if (nombre != null && apellido_paterno != null && apellido_materno != null && domicilio != null && patente !=null) {
+                        val persona = Persona(rut, nombre, apellido_paterno,apellido_materno,domicilio,patente)
                         callback(persona)
                     } else {
                         callback(null)
@@ -80,5 +81,34 @@ class BDServices {
             .addOnFailureListener { e ->
                 callback(null, e) // Llamar al callback con un error
             }
+    }
+    fun getPersonaPorpatente(vehiculo_patente: String, callback: (Persona?) -> Unit) {
+        db.collection("persona")
+            .whereEqualTo("vehiculo_patente", vehiculo_patente)
+            .get()
+            .addOnSuccessListener { querySnapshot ->
+                if (!querySnapshot.isEmpty) {
+                    val document = querySnapshot.documents[0]
+                    val rut=document.getString("rut")
+                    val nombre = document.getString("nombre")
+                    val apellido_paterno = document.getString("apellido_paterno")
+                    val apellido_materno = document.getString("apellido_materno")
+                    val domicilio = document.getString("domicilio")
+
+                    if (rut != null && nombre != null && apellido_paterno != null && apellido_materno != null && domicilio != null && vehiculo_patente !=null) {
+                        val persona = Persona(rut, nombre, apellido_paterno,apellido_materno,domicilio,vehiculo_patente)
+                        callback(persona)
+                    } else {
+                        callback(null)
+                    }
+                } else {
+                    callback(null)
+                }
+            }
+            .addOnFailureListener { e ->
+                callback(null)
+            }
+
+
     }
 }

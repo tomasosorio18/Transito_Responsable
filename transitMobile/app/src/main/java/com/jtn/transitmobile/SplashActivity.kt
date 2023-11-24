@@ -16,7 +16,7 @@ class SplashActivity : AppCompatActivity() {
             window.statusBarColor = ContextCompat.getColor(this, R.color.colorPrimaryDark)
         }
         Handler().postDelayed({
-            val intent = Intent(this@SplashActivity, MainActivity::class.java)
+            val intent = Intent(this@SplashActivity, LandingActivity::class.java)
             startActivity(intent)
             finish()
         }, 2000)

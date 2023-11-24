@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">@null</item>
     </style>
 
     <!-- Defined a new style with three items of color. -->
@@ -16,5 +17,8 @@
         <!-- Defining that new color in ColorPrimaryDark -->
         <item name="colorPrimaryDark">@color/colorOfStatusBar</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="bordes" parent="">
+        <item name="cornerSize">20%</item>
     </style>
 </resources>

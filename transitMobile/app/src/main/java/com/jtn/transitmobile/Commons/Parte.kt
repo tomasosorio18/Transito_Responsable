@@ -1,5 +1,6 @@
 package com.jtn.transitmobile.Commons
 
+
 data class Parte(
     val rut: String = "",
     val nombre: String = "",
@@ -10,5 +11,7 @@ data class Parte(
     val fecha:String = "",
     val fecha_citacion: String = "",
     val hora:String = "",
-    val responsable:String = ""
+    val responsable:String = "",
+    val patente:String = ""
 )
+
